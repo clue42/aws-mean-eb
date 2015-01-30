@@ -1,2 +1,2 @@
 # aws-mean-eb
-Configuration files to deploy a mean stack on AWS Elastic beanstalk
+Configuration files to deploy a mean stack on AWS Elastic Beanstalk
