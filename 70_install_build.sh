@@ -12,6 +12,6 @@ function error_exit
 if [ ! -L /usr/bin/node ]; then
     ln -s /opt/elasticbeanstalk/node-install/node-v$NODE_VER-linux-$ARCH/bin/node /usr/bin/node
 fi
-if [ /var/app/current ]; then
-    cd /var/app/current && bower install && brunch build -P
+if [ $APP_HOME ]; then
+    cd $APP_HOME && $APP_HOME/node_modules/bower/bin/bower install -q && $APP_HOME/node_modules/brunch/bin/brunch build -P
 fi
