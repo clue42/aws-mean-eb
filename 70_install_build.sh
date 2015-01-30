@@ -13,5 +13,5 @@ if [ ! -L /usr/bin/node ]; then
     ln -s /opt/elasticbeanstalk/node-install/node-v$NODE_VER-linux-$ARCH/bin/node /usr/bin/node
 fi
 if [ $APP_HOME ]; then
-    sudo -u nodejs cd $APP_HOME && $APP_HOME/node_modules/bower/bin/bower install -q && $APP_HOME/node_modules/brunch/bin/brunch build -P
+    cd $APP_HOME && $APP_HOME/node_modules/bower/bin/bower install -q --allow-root && $APP_HOME/node_modules/brunch/bin/brunch build -P
 fi
